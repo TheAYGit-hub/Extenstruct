@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blockly Editor</title>
+        <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+        <script src="https://unpkg.com/blockly/JavaScript_compressed.js"></script>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+                font-family: sans-serif
+            }
+            #container {
+                display: flex;
+                width: 100%;
+                height: 100%
+            }
+            #blocklyDiv {flex: 1}
+            #codePanel {
+                width: 500px;
+                border-left: 1px solid #ccc;
+                padding: 10px;
+                box-sizing: border-box;
+                overflow: auto;
+                background: #f5f5f5
+            }
+            #code {
+                white-space: pre-wrap;
+                font-family: monospace
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="blocklyDiv"></div>
+            <div id="codePanel">
+                <h3>Generated JavaScript</h3>
+                <pre id="code"></pre>
+            </div>
+        </div>
+        <xml id="toolbox" style="display:none">
+            <category name="Motion" colour="#4c97ff">
+                <label text="Motion" gap="8"></label>
+                <block type="moveSteps" gap="8">
+                    <value name="steps">
+                        <shadow type="number">
+                            <field name="number">10</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="turnRight" gap="8">
+                    <value name="degrees">
+                        <shadow type="number">
+                            <field name="number">15</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="turnLeft" gap="24">
+                    <value name="degrees">
+                        <shadow type="number">
+                            <field name="number">15</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="goTo" gap="8"></block>
+                <block type="goToXY" gap="8">
+                    <value name="x">
+                        <shadow type="number"></shadow>
+                    </value>
+                    <value name="y">
+                        <shadow type="number"></shadow>
+                    </value>
+                </block>
+                <block type="changeByXY" gap="24">
+                    <value name="x">
+                        <shadow type="number"></shadow>
+                    </value>
+                    <value name="y">
+                        <shadow type="number"></shadow>
+                    </value>
+                </block>
+                <block type="pointInDirection" gap="8">
+                    <value name="dir">
+                        <shadow type="number">
+                            <field name="number">90</field>
+                        </shadow>
+                    </value>
+                </block>
+                <block type="pointTowards" gap="8"></block>
+                <block type="pointTowardsXY" gap="24">
+                    <value name="x">
+                        <shadow type="number"></shadow>
+                    </value>
+                    <value name="y">
+                        <shadow type="number"></shadow>
+                    </value>
+                </block>
+                <block type="setX" gap="8">
+                    <value name="value">
+                        <shadow type="number"></shadow>
+                    </value>
+                </block>
+                <block type="changeX" gap="8">
+                    <value name="value">
+                        <shadow type="number"></shadow>
+                    </value>
+                </block>
+                <block type="setY" gap="8">
+                    <value name="value">
+                        <shadow type="number"></shadow>
+                    </value>
+                </block>
+                <block type="changeY" gap="24">
+                    <value name="value">
+                        <shadow type="number"></shadow>
+                    </value>
+                </block>
+                <block type="pointTowards" gap="24"></block>
+                <block type="position" gap="8"></block>
+                <block type="xPosition" gap="8"></block>
+                <block type="yPosition" gap="8"></block>
+                <block type="direction" gap="8"></block>
+            </category>
+            <category name="Numbers" colour="#59c059">
+                <block type="number" gap="24"></block>
+            </category>
+        </xml>
+        <script src="script.js"></script>
+        <script src="blocks/motion.js"></script>
+        <script src="blocks/numbers.js"></script>
+    </body>
+</html>
