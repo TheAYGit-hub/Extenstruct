@@ -124,12 +124,41 @@
                 <block type="yPosition" gap="8"></block>
                 <block type="direction" gap="8"></block>
             </category>
+            <category name="Looks" colour="#9966ff">
+                <label text="Looks" gap="8"></label>
+                <block type="setSize" gap="8">
+                    <value name="value">
+                        <shadow type="number">100</shadow>
+                    </value>
+                </block>
+                <block type="changeSize" gap="8">
+                    <value name="value">
+                        <shadow type="number">10</shadow>
+                    </value>
+                </block>
+                <block type="size" gap="8"></block>
+            </category>
+            <category name="Sound" colour="#d65cd6">
+                <label text="Sound" gap="8"></label>
+                <label text="too lazy to add sound blocks yet" gap="8"></label>
+            </category>
+            <category name="Events" colour="#ffd500">
+                <label text="Events" gap="8"></label>
+                <block type="whenFlagClicked" gap="8"></block>
+                <block type="whenStopSignClicked" gap="8"></block>
+                <block type="whenExtensionLoaded" gap="24"></block>
+                <block type="beforeProjectTick" gap="8"></block>
+                <block type="afterProjectTick" gap="8"></block>
+            </category>
             <category name="Numbers" colour="#59c059">
                 <block type="number" gap="24"></block>
             </category>
         </xml>
         <script src="script.js"></script>
         <script src="blocks/motion.js"></script>
+        <script src="blocks/looks.js"></script>
+        <script src="blocks/sounds.js"></script>
+        <script src="blocks/events.js"></script>
         <script src="blocks/numbers.js"></script>
     </body>
 </html>

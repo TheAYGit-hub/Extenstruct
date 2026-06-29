@@ -6,5 +6,5 @@ Blockly.Blocks.number = {
     }
 }
 Blockly.JavaScript.forBlock.number = function(block) {
-    return [block.getFieldValue('number') || 0, 0]
+    return [block.getFieldValue('number') ?? 0, 0]
 }
